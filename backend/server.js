@@ -32,7 +32,10 @@ if (!JWT_SECRET) {
 
 app.use(
   cors({
-    origin: "https://portfolio-s-mocha.vercel.app",
+    origin:[
+       "http://localhost:5173",
+      "https://portfolio-s-mocha.vercel.app",
+       ],
     credentials: true,
   })
 );
