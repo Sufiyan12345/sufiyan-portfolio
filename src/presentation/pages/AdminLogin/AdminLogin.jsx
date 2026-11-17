@@ -12,7 +12,7 @@ import {
 
 import "./AdminLogin.css";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://sufiyan-portfolio.onrender.com/api";
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({

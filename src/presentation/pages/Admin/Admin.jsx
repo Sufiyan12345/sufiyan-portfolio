@@ -30,7 +30,7 @@ import {
 import "./Admin.css";
 
 const API_BASE_URL =
-  "http://localhost:5000/api";
+  "https://sufiyan-portfolio.onrender.com/api";
 
 /* =========================================================
    AUTH HELPERS
