@@ -1,0 +1,116 @@
+/* =========================================================
+   APP ROOT
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow-x: clip;
+}
+
+/* =========================================================
+   MAIN APP
+========================================================= */
+
+main {
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   GLOBAL SECTION BASE
+========================================================= */
+
+section {
+  width: 100%;
+  position: relative;
+}
+
+/* =========================================================
+   GLOBAL ANIMATION SAFETY
+========================================================= */
+
+/*
+  Prevents animated elements from accidentally creating
+  horizontal overflow during Framer Motion transforms.
+*/
+
+.motion-safe {
+  will-change: transform, opacity;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* =========================================================
+   FOCUS STATES
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(82, 155, 255, 0.7);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   IMAGE SAFETY
+========================================================= */
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   MOBILE SAFETY
+========================================================= */
+
+@media (max-width: 600px) {
+  #root {
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  main {
+    width: 100%;
+    overflow-x: clip;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe {
+    will-change: auto;
+  }
+}

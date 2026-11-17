@@ -1,0 +1,557 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 22px 32px;
+
+  z-index: 1000;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   NAVBAR INNER
+========================================================= */
+
+.navbar-inner {
+  width: min(1400px, 100%);
+
+  min-height: 60px;
+
+  margin: 0 auto;
+
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(145, 175, 220, 0.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(9, 14, 25, 0.72),
+      rgba(5, 10, 19, 0.58)
+    );
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  pointer-events: auto;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #070707;
+
+  font-family: var(--font-display);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 25px rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.navbar-logo:hover .logo-mark {
+  transform: rotate(-8deg) scale(1.04);
+
+  box-shadow:
+    0 0 25px rgba(75, 145, 255, 0.18);
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin-left: auto;
+  margin-right: 34px;
+}
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 0;
+
+  background: transparent;
+
+  color: #8e8e8e;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 1px;
+
+  background: #4d92ff;
+
+  box-shadow:
+    0 0 10px rgba(77, 146, 255, 0.7);
+
+  transition: width 0.3s ease;
+}
+
+.nav-link svg {
+  opacity: 0;
+
+  transform: translate(-3px, 3px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover svg {
+  opacity: 1;
+
+  transform: translate(0, 0);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.navbar-cta {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  padding: 11px 16px;
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: #070707;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 30px rgba(100, 155, 255, 0.12);
+}
+
+.navbar-cta svg {
+  transition: transform 0.3s ease;
+}
+
+.navbar-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(100, 150, 220, 0.1);
+
+  border-radius: 50%;
+
+  background:
+    rgba(25, 35, 55, 0.35);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  background:
+    rgba(50, 110, 210, 0.15);
+
+  border-color:
+    rgba(80, 150, 255, 0.25);
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.94);
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  width: min(1400px, 100%);
+
+  margin: 8px auto 0;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(145, 175, 220, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 15, 28, 0.95),
+      rgba(4, 10, 20, 0.92)
+    );
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.28);
+
+  pointer-events: auto;
+}
+
+.mobile-menu-inner {
+  padding: 20px;
+}
+
+/* =========================================================
+   MOBILE NAV LINKS
+========================================================= */
+
+.mobile-nav-link {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 0;
+
+  background: transparent;
+
+  border-bottom:
+    1px solid rgba(145, 175, 220, 0.08);
+
+  color: rgba(180, 190, 210, 0.72);
+
+  font-family: var(--font-display);
+
+  font-size: 25px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.mobile-nav-link svg {
+  color: #4d92ff;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: white;
+
+  padding-left: 6px;
+}
+
+.mobile-nav-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   MOBILE CONTACT
+========================================================= */
+
+.mobile-contact {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 15px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #e8effa
+    );
+
+  color: #070707;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mobile-contact:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px rgba(120, 160, 220, 0.14);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 20px 28px;
+  }
+
+  .navbar-nav {
+    gap: 25px;
+
+    margin-right: 24px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 18px 25px;
+  }
+
+  .navbar-inner {
+    min-height: 58px;
+
+    padding: 12px 14px;
+
+    border-radius: 16px;
+  }
+
+  .navbar-nav,
+  .navbar-cta {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .mobile-menu {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .navbar-inner {
+    min-height: 55px;
+
+    padding: 11px 12px;
+
+    border-radius: 15px;
+  }
+
+  .logo-mark {
+    width: 29px;
+    height: 29px;
+
+    font-size: 13px;
+  }
+
+  .logo-name {
+    font-size: 13px;
+
+    letter-spacing: 0.11em;
+  }
+
+  .mobile-menu {
+    margin-top: 7px;
+
+    border-radius: 16px;
+  }
+
+  .mobile-menu-inner {
+    padding: 17px;
+  }
+
+  .mobile-nav-link {
+    padding: 16px 0;
+
+    font-size: 22px;
+  }
+
+  .mobile-contact {
+    margin-top: 19px;
+
+    padding: 14px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .navbar {
+    padding-inline: 14px;
+  }
+
+  .navbar-inner {
+    padding-inline: 10px;
+  }
+
+  .logo-name {
+    font-size: 12px;
+  }
+
+  .mobile-menu-inner {
+    padding: 15px;
+  }
+
+  .mobile-nav-link {
+    font-size: 20px;
+  }
+}

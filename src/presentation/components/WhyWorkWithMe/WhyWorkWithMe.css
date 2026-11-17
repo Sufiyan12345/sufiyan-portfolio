@@ -1,0 +1,739 @@
+/* =========================================================
+   WHY WORK WITH ME
+========================================================= */
+
+.why-me-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+
+  padding: 150px 0 80px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(20, 100, 220, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(35, 110, 255, 0.06),
+      transparent 32%
+    ),
+    #050b16;
+
+  border-top: 1px solid rgba(100, 150, 255, 0.08);
+}
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.why-me-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(80, 140, 220, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(80, 140, 220, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   AMBIENT GLOWS
+========================================================= */
+
+.why-me-glow {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.12;
+
+  pointer-events: none;
+}
+
+.why-me-glow-one {
+  top: 20%;
+  left: -300px;
+
+  background: rgba(25, 110, 255, 0.35);
+}
+
+.why-me-glow-two {
+  right: -300px;
+  bottom: 10%;
+
+  background: rgba(30, 130, 255, 0.28);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.why-me-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1400px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.why-me-header {
+  margin-bottom: 90px;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.why-me-label {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 42px;
+}
+
+.why-me-label-line {
+  width: 48px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(80, 160, 255, 0),
+      rgba(80, 160, 255, 0.8)
+    );
+}
+
+.why-me-label div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.why-me-label div span:last-child {
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.22em;
+
+  color: rgba(160, 190, 230, 0.55);
+}
+
+.why-me-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #5fa8ff;
+
+  box-shadow:
+    0 0 12px rgba(80, 160, 255, 0.9);
+}
+
+/* =========================================================
+   HEADING ROW
+========================================================= */
+
+.why-me-heading-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(300px, 0.65fr);
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.why-me-title h2 {
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(62px, 8vw, 126px);
+
+  line-height: 0.86;
+
+  font-weight: 500;
+
+  letter-spacing: -0.065em;
+
+  color: #f4f7fb;
+}
+
+.why-me-title h2 span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(100, 165, 255, 0.7);
+
+  text-shadow:
+    0 0 35px rgba(45, 125, 255, 0.08);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.why-me-intro {
+  max-width: 430px;
+
+  padding-bottom: 8px;
+}
+
+.why-me-intro > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(110, 170, 255, 0.7);
+}
+
+.why-me-intro p {
+  margin: 0;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: rgba(190, 205, 225, 0.58);
+}
+
+/* =========================================================
+   PRINCIPLES GRID
+========================================================= */
+
+.why-me-principles {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.why-me-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 25, 46, 0.9),
+      rgba(7, 15, 29, 0.76)
+    );
+
+  border:
+    1px solid rgba(100, 155, 225, 0.12);
+
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+
+  isolation: isolate;
+}
+
+.why-me-card:hover {
+  border-color:
+    rgba(85, 155, 255, 0.4);
+
+  box-shadow:
+    0 20px 70px rgba(0, 50, 130, 0.18);
+}
+
+/* =========================================================
+   CARD GLOW
+========================================================= */
+
+.why-card-glow {
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -150px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(50, 140, 255, 0.2),
+      transparent 68%
+    );
+
+  filter: blur(12px);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.7s ease;
+
+  z-index: -1;
+}
+
+.why-me-card:hover .why-card-glow {
+  opacity: 1;
+
+  transform:
+    translate(-20px, 20px);
+}
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.why-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.why-card-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(90, 155, 240, 0.2);
+
+  background:
+    rgba(20, 60, 110, 0.18);
+
+  color: #72b3ff;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.why-me-card:hover .why-card-icon {
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+
+  border-color:
+    rgba(100, 175, 255, 0.55);
+
+  box-shadow:
+    0 0 30px rgba(50, 135, 255, 0.16);
+}
+
+.why-card-number {
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.16em;
+
+  color:
+    rgba(120, 170, 225, 0.3);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.why-card-content {
+  max-width: 520px;
+
+  margin-top: 50px;
+}
+
+.why-card-eyebrow {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.22em;
+
+  color:
+    rgba(100, 165, 255, 0.62);
+}
+
+.why-card-content h3 {
+  margin: 0 0 18px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(30px, 4vw, 46px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  font-weight: 500;
+
+  color: #f1f5fa;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.why-me-card:hover .why-card-content h3 {
+  color: #ffffff;
+
+  transform:
+    translateX(4px);
+}
+
+.why-card-content p {
+  margin: 0;
+
+  max-width: 460px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(175, 195, 220, 0.52);
+}
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.why-card-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 40px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(120, 160, 205, 0.3);
+}
+
+.why-card-arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(100, 160, 230, 0.13);
+
+  color:
+    rgba(125, 180, 250, 0.5);
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.why-me-card:hover .why-card-arrow {
+  transform:
+    translate(4px, -4px);
+
+  color: #ffffff;
+
+  border-color:
+    rgba(100, 170, 255, 0.5);
+
+  background:
+    rgba(40, 110, 200, 0.12);
+}
+
+/* =========================================================
+   CARD BOTTOM LINE
+========================================================= */
+
+.why-card-line {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(75, 150, 255, 0.55),
+      transparent
+    );
+
+  transform:
+    scaleX(0);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.why-me-card:hover .why-card-line {
+  transform:
+    scaleX(1);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .why-me-container {
+    width:
+      min(1400px, calc(100% - 50px));
+  }
+
+  .why-me-heading-row {
+    gap: 50px;
+  }
+
+  .why-me-title h2 {
+    font-size:
+      clamp(58px, 9vw, 100px);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .why-me-section {
+    padding:
+      120px 0 65px;
+  }
+
+  .why-me-container {
+    width:
+      min(100% - 36px, 680px);
+  }
+
+  .why-me-header {
+    margin-bottom: 60px;
+  }
+
+  .why-me-heading-row {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .why-me-title h2 {
+    font-size:
+      clamp(58px, 14vw, 92px);
+  }
+
+  .why-me-intro {
+    max-width: 560px;
+  }
+
+  .why-me-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .why-me-card {
+    min-height: 330px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .why-me-section {
+    padding:
+      100px 0 55px;
+  }
+
+  .why-me-container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .why-me-label {
+    margin-bottom: 32px;
+  }
+
+  .why-me-title h2 {
+    font-size:
+      clamp(48px, 16vw, 72px);
+
+    line-height: 0.9;
+  }
+
+  .why-me-intro p {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .why-me-card {
+    min-height: 350px;
+
+    padding: 24px;
+  }
+
+  .why-card-content {
+    margin-top: 40px;
+  }
+
+  .why-card-content h3 {
+    font-size: 32px;
+  }
+
+  .why-card-content p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .why-card-line {
+    left: 24px;
+    right: 24px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .why-me-section {
+    padding:
+      95px 0 50px;
+  }
+
+  .why-me-title h2 {
+    font-size: 45px;
+  }
+
+  .why-card-content h3 {
+    font-size: 29px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .why-me-card,
+  .why-card-icon,
+  .why-card-arrow,
+  .why-card-line,
+  .why-card-glow {
+    transition: none;
+  }
+}
