@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 
 import MainLayout from "./presentation/layouts/MainLayout";
@@ -17,22 +18,25 @@ function App() {
 
         {/* PUBLIC WEBSITE */}
         <Route element={<MainLayout />}>
-          <Route
-            path="/"
-            element={<Home />}
-          />
+          <Route path="/" element={<Home />} />
         </Route>
-
-        {/* ADMIN */}
-        <Route
-          path="/admin"
-          element={<Admin />}
-        />
 
         {/* ADMIN LOGIN */}
         <Route
           path="/admin/login"
           element={<AdminLogin />}
+        />
+
+        {/* ADMIN DASHBOARD */}
+        <Route
+          path="/admin"
+          element={<Admin />}
+        />
+
+        {/* UNKNOWN ROUTES */}
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
         />
 
       </Routes>
